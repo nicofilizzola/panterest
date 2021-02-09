@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Panterest</title>
+    </head>
+    <body>
+        <a href="{{ path('create') }}">Create pin</a>
+        {% for pin in allPins %}
+            <article>
+                <h1>
+                    {{pin.title}}
+                </h1>
+                <p>
+                    {{pin.description}}
+                </p>
+            </article>
+        {% endfor %}
+    </body>
+</html>

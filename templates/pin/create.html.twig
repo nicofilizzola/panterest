@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Panterest</title>
+    </head>
+    <body>
+        <a href="{{ path('index') }}">Home</a>
+        <h1>Create a pin</h1>
+        {# {{ form(formView) }} #}
+        {{ form_start(formView) }}
+            {{ form_widget(formView) }}
+            <button type="submit">Create Pin</button>
+        {{ form_end(formView)}}
+
+        
+        <!-- FORM MANAGER (NAIVE APPROACH)
+
+            <form method="post" action="" accept-charset="UTF-8">
+            <input type="hidden" name="_token" value="{{ csrf_token('pin_create') }}">
+            <label id="title">Title</label>
+            <input type="text" name="title" id="title">
+        
+            <label for="description">Description</label>
+            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            
+            <button type="submit" name="submit">Create pin</button>
+        </form>
+        -->
+    </body>
+</html>
